@@ -1,3 +1,3 @@
-## Hi, I'm Glen!
+# Glen Passanha
 
 Here is something about me.
