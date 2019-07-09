@@ -16,10 +16,14 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <h1 id="project_title">{{ site.myself.name }}</h1>
-          <h2>{{site.myself.address}} {{site.myself.phone}} {{site.myself.email}}</h2>
+          <h6 class="header_details">
+            <span>{{site.myself.address}}</span>
+            <span>{{site.myself.phone}}</span>
+            <span>{{site.myself.email}}</span>
+          </h6>
           
           {% for link in site.myself.external %}
-          <a href={{link.url}}>{{link.title}}</a>
+          <a class="header_link" target="_blank" href="{{link.url}}">{{link.title}}</a>
           {% endfor %}
         </header>
     </div>
@@ -27,7 +31,14 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        {{ content }}
+        {% for section in site.sections %}
+          <div class="main_content_section {{section.key}}">
+            <h3>{{section.value}}</h3>
+            <div class="main_content_content">
+              {{section.content}}
+            </div>
+          </div>
+        {% endfor %}
       </section>
     </div>
 
