@@ -1,3 +1,28 @@
 theme: jekyll-theme-slate
 myself:
   name: Glen Passanha
+  address: San Francisco, CA-94118
+  phone: (714)-463-0757
+  email: glenpassanha@gmail.com
+  external:
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/glen-passanha-23b50012a/
+sections:
+  - value: Summary
+    key: summary
+    content: summary-content
+  - value: Education 
+    key: education
+    content: education-content
+  - value: Skills
+    key: skills
+    content: skill-content
+  - value: Experience
+    key: experience 
+    content: experience-content
+  - value: Related Coursework
+    key: coursework
+    content: coursework-content
+  - value: Academic Projects 
+    key: projects 
+    content: project-content
