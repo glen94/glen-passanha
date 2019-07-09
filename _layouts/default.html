@@ -16,7 +16,11 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <h1 id="project_title">{{ site.myself.name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+          <h2>{{site.myself.address}} {{site.myself.phone}} {{site.myself.email}}</h2>
+          
+          {% for link in site.myself.external %}
+          <a href={{link.url}}>{{link.title}}</a>
+          {% endfor %}
         </header>
     </div>
 
