@@ -10,19 +10,131 @@ myself:
 sections:
   - value: Summary
     key: summary
-    content: summary-content
+    content:
+      - value: MS Electrical Engineering
+        desc: with specialization in Communication Systems
+      - value: Project Experience of Antenna Design and Theory
+        desc: using Agile Design Software (ADS) in combination with MATLAB
+      - value: Knowledge of Antenna Arrays
+        desc: Ordinary Endfire, Broadside and Hensor-Woodyard Endfire, Microstrip Antenna, Dipoles and Loops
+      - value: Experience working as an Intern
+        desc: at a Mid-Size Internet Service Provider (ISP)
+      - value: Experience working at a University Scale Data Center
+        desc: Configuring and Troubleshooting L2 & L3 network devices
+      - value: Experience of Object Oriented Programming (Python), TCP/IP Protocols,
+        desc: System Configuration, Routing Protocols, Troubleshooting
   - value: Education 
     key: education
-    content: education-content
+    content:
+      - value: California State University, Fullerton, USA
+        desc: MS in Electrical Engineering
+        gpa: 3.40 GPA
+        startDate: Aug 2017
+        endDate: May 2019
+      - value: Mumbai University, India
+        desc: BS in Electronics & Telecommunication
+        gpa: 3.20 GPA
+        startDate: May 2012
+        endDate: May 2016
   - value: Skills
     key: skills
-    content: skill-content
+    content:
+      - value: Networking
+        desc: Open flow/Stack, OSPF, DNS, DHCP, Inter-Vlan Switching, CISCO and JUNIPER Switch/Router configuration
+      - value: Wireless
+        desc: GSM, UMTS, CDMA, WCDMA, HSPA, VOLTE, GPS,3GPP/ Bluetooth/WiFi Standards, Antenna Arrays, Antenna Properties
+      - value: Tools
+        desc: Network/Spectrum Analyzer, Agile Design Software (ADS), Matlab, PuTTy, Wireshark, Cisco Packet Tracer, PSpice, Eagle, PCB 
+Wizard, Firewall Setup
+      - value: Protocols
+        desc: Routing protocols (RIP, EIGRP, BGP, STP, RSTP, DHCP, ARP), MIMO Techniques, Adaptive Multiple Antenna Techniques, SDR
   - value: Experience
     key: experience 
-    content: experience-content
+    content:
+       - value: University Data Center (Student Assistant)
+        desc: California State University, Fullerton, CA, USA
+        startDate: May 2018
+        endDate: May 2019
+        duties:
+          - Responsible for timely maintenance, configuration, loading and setup of the Servers and Switches on the respective racks
+          - Creating Issue Tickets using Service Now, Providing Technical Support to Staff/Students regarding Campus portal issues
+      - value: Network Engineer Intern
+        desc: Sampark Infotainment, Mumbai, India 
+        startDate: Feb 2017
+        endDate: May 2017
+        duties:
+          - Interacting with Field Engineers to resolve connection problems that involved hardware breakdown at the NOC
+          - Troubleshoot and maintained all networking devices across the enterprise mainly Switches and Routers
+      - value: Controls Engineer Intern
+        desc: Bharat Petroleum Corporation Limited (B.P.C.L), Mumbai, India
+        startDate: Dec 2016
+        endDate: Jan 2017
+        duties:
+          - Maintaining log for Service requests, eg: Date and Time of servicing and maintenance
+          - Responsible for changing the ladder code of the Allen Bradley PLC as and when required by the management
   - value: Related Coursework
     key: coursework
-    content: coursework-content
+    content:
+      - value: Courses
+        course:
+          - key: EE580
+            value: Analysis of Random Signals
+          - key: EE503
+            value: Information Theory & Coding
+          - key: EE510
+            value: Optics & EM in Comm 
+          - key: EE469
+            value: Antennas for Wireless Communication 
+          - key: EE443
+            value: Electronic Communications 
+          - key: EE483
+            value: Global Positioning Systems 
+          - key: EE543
+            value: Advanced Secure Hardware Design 
+          - key: EE420
+            value: Digital Filtering 
+          - key: EE529
+            value: Neural Systems
+      - value: Cisco Certified Network Associate (CCNA)
+        desc: Mumbai
+        date: June 2016
+        duties:
+          - TCP/IP protocols, Subnetting (FLSM/VLSM), Routers, Basic Configuration Commands, WAN Connectivity, OSI Model, STP/STP Optimization
+          - Simulation on Cisco Packet Tracer, VLAN Configuration, Advanced Security Configuration, DHCP Configuration
+      - value: IEEE Certified PLC & SCADA Controls Engineer (Allen Bradley)
+        desc: Mumbai
+        date: November 2015
+        duties:
+          - Designing Industrial Automation using Ladder Programming and SCADA for Simulation
   - value: Academic Projects 
     key: projects 
-    content: project-content
+    content:
+      - value: Designing a Microstrip based Rectangular patch Antenna
+        desc: Agile ADS, MATLAB
+        location: CSUF
+        date: May 2019
+        content:
+          - Designed a rectangular patch antenna resonating at frequency 5Ghz using Substrate RT Duroid 5880, Antenna to Touchstone to Schematic, Optimization of Schematic
+          - Achieved S11 at 5Ghz < -12dB, Directivity > 8dBi , Gain > 6dBi, Optimized the feeding circuit keeping S11 < -30dB
+      - value: Hand Gesture Recognition using Convolutional Neural Networks
+        desc: Python, Java Applet
+        location: CSUF
+        date: May 2019
+        content:
+          - Three parts of the project: Collection of Data Set, Training the Neural Network, Hand Gesture Recognition
+          - Applied a Java Applet along with python modules Hand Detector, Easy Socket, Netmaker, Dataloader, Netloader, Tensorflow to get the desired Hand Gesture Output
+      - value: Power Generation using an Array of Piezoelectric discs
+        desc: Analog/Digital Circuitry
+        location: Mumbai University
+        date: May 2016
+        content:
+          - Successfully built a 15x15 Piezo electric disc Array with each row and column connected in Series-Parallel combination for a magnified Current and Voltage value to charge a Battery
+          - The Model was able to give out 12V when subjected to force by foot and a magnanimous 40V when subjected to pressure by wheels of Railway Engine
+          - The Stored Energy from the discs was successfully able to power applications like mobile charging and light bulb
+      - value: Wireless Long range Multi-Terrain Rover
+        desc: ATmega16, MT8870
+        location: Mumbai University
+        date: Jan 2015
+        content:
+          - Executed Rover maneuver with Cellphones where DTMF tone was decoded by MT8870 decoder and sent to ATmega16 microcontroller
+          - The Microcontroller was responsible to control the motor movements based on the output of the DTMF decoder
