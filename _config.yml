@@ -51,7 +51,7 @@ Wizard, Firewall Setup
   - value: Experience
     key: experience 
     content:
-       - value: University Data Center (Student Assistant)
+      - value: University Data Center (Student Assistant)
         desc: California State University, Fullerton, CA, USA
         startDate: May 2018
         endDate: May 2019
