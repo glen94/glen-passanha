@@ -44,8 +44,7 @@ sections:
       - value: Wireless
         desc: GSM, UMTS, CDMA, WCDMA, HSPA, VOLTE, GPS,3GPP/ Bluetooth/WiFi Standards, Antenna Arrays, Antenna Properties
       - value: Tools
-        desc: Network/Spectrum Analyzer, Agile Design Software (ADS), Matlab, PuTTy, Wireshark, Cisco Packet Tracer, PSpice, Eagle, PCB 
-Wizard, Firewall Setup
+        desc: Network/Spectrum Analyzer, Agile Design Software (ADS), Matlab, PuTTy, Wireshark, Cisco Packet Tracer, PSpice, Eagle, PCB Wizard, Firewall Setup
       - value: Protocols
         desc: Routing protocols (RIP, EIGRP, BGP, STP, RSTP, DHCP, ARP), MIMO Techniques, Adaptive Multiple Antenna Techniques, SDR
   - value: Experience
