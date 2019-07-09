@@ -35,7 +35,10 @@
           <div class="main_content_section {{section.key}}">
             <h3>{{section.value}}</h3>
             <div class="main_content_content">
-              {{section.content}}
+              {% for data in section.content %}
+              <span class="data_value">{{data.value}}</span>
+              <span class="data_desc">{{data.desc}}</span>
+              {% endfor %}
             </div>
           </div>
         {% endfor %}
