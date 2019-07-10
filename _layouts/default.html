@@ -38,7 +38,7 @@
           {% for data in section.content %}
           <div class="main_content_content">
             {% if data.key == 'summary' %}
-            {% include summary.html %}
+            {% include summary.html content=data %}
             {% endif %}
           </div>
           {% endfor %}
