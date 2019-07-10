@@ -37,8 +37,9 @@
           
           {% for data in section.content %}
           <div class="main_content_content">
-            <span class="data_value">{{data.value}}</span>
-            <span class="data_desc">{{data.desc}}</span>
+            {% if data.key == 'summary' %}
+            {% include summary.html %}
+            {% endif %}
           </div>
           {% endfor %}
         </div>
