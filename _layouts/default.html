@@ -1,68 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-{% seo %}
+    {% seo %}
   </head>
 
   <body>
-
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">{{ site.myself.name }}</h1>
-          <h6 class="header_details">
-            <span>{{site.myself.address}}</span>
-            <span>{{site.myself.phone}}</span>
-            <span>{{site.myself.email}}</span>
-          </h6>
-          
-          {% for link in site.myself.external %}
-          <a class="header_link" target="_blank" href="{{link.url}}">{{link.title}}</a>
-          {% endfor %}
-        </header>
-    </div>
+    {% include header.html myself=site.myself %}
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {% for section in site.sections %}
-        <div class="main_content_section {{section.key}}">
-          <h3>{{section.value}}</h3>
-          
-          {% case section.key %}
-
-          <div class="main_content_content">
-          {% when 'summary' %}
-              {% include {{section.key}}.html data=section.content %}
-          {% when 'education' %}
-            {% include education.html data=section.content %}
-          {% when 'skills' %}
-            {% include skills.html data=section.content %}
-          {% when 'experience' %}
-            {% include experience.html data=section.content %}
-          {% when 'coursework' %}
-            {% include coursework.html data=section.content %}
-          {% when 'projects' %}
-            {% include projects.html data=section.content %}
-          </div>
-          {% endcase %}
-        </div>
-        {% endfor %}
-      </section>
-    </div>
+    {% include sections.html sections=site.sections %}
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+    {% include footer.html %}
 
     {% if site.google_analytics %}
       <script>

@@ -1,0 +1,14 @@
+<div id="header_wrap" class="outer">
+  <header class="inner">
+    <h1 id="project_title">{{ include.myself.name }}</h1>
+    <h6 class="header_details">
+      <span>{{include.myself.address}}</span>
+      <span>{{include.myself.phone}}</span>
+      <span>{{include.myself.email}}</span>
+    </h6>
+    
+    {% for link in include.myself.external %}
+    <a class="header_link" target="_blank" href="{{link.url}}">{{link.title}}</a>
+    {% endfor %}
+  </header>
+</div>
