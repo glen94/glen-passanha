@@ -205,6 +205,7 @@ a {padding: 0 8px;text-decoration: none;}
   
 
   .experience .data-row {
+    @include titleTypography();
     @include dateRangeTypography();
     @include descriptionTypography();
     @include dutiesTypography();

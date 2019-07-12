@@ -49,8 +49,8 @@ sections:
   - value: Experience
     key: experience 
     content:
-      - value: University Data Center (Student Assistant)
-        desc: California State University, Fullerton, CA, USA
+      - value: Student Assistant
+        desc: University Data Center, California State University, Fullerton, CA, USA
         startDate: May 2018
         endDate: May 2019
         duties:
