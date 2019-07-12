@@ -38,6 +38,7 @@ a {padding: 0 8px;text-decoration: none;}
     .glen-header-about {
       flex: 1;
       .glen-header-about-glen {
+        @include fontSize(1em);
         display: flex;
         margin: 0;
         color: $azureishWhite;
@@ -60,7 +61,7 @@ a {padding: 0 8px;text-decoration: none;}
 .glen-content {
   padding: 0 16px;
   .glen-section {
-    padding: 1em 0 0;
+    padding: 1em 0;
     .glen-section-heading {
       @include fontSize(16px);
       margin: 0;
@@ -78,6 +79,19 @@ a {padding: 0 8px;text-decoration: none;}
         }
       }
     }
+  }
+
+  .data-row {
+    @include fontSize(14px);
+    position: relative;
+    padding: 2px 0;
+    &:hover {
+      background: $veryPaleYellow;
+    }
+  }
+
+  .education .data-row {
+    
   }
 }
 
