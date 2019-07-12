@@ -133,6 +133,23 @@ a {padding: 0 8px;text-decoration: none;}
       }
     }
   }
+
+  .skills .data-row {
+    display: flex;
+    flex-direction: column;
+    .data-value {
+      text-transform: uppercase;
+    }
+    &:hover {
+      .data-value {
+        font-weight: bold;
+      }
+      .data-desc {
+        font-style: italic;
+        padding: 0 8px;
+      }
+    }
+  }
 }
 
 .glen-footer {
