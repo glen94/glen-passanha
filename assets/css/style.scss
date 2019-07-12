@@ -91,7 +91,47 @@ a {padding: 0 8px;text-decoration: none;}
   }
 
   .education .data-row {
-    
+    .data-value {
+      text-transform: uppercase;
+    }
+    .data-startDate {
+      &:before {
+        content: ' [ ';
+      }
+      &:after {
+        content: ' - ';
+      }
+    }
+    .data-endDate {
+      &:after {
+        content: ' ] ';
+      }
+    }
+
+    &:hover {
+      .data-value {
+        font-weight: bold;
+      }
+      .data-desc {
+        font-style: italic;
+      }
+      .data-gpa {
+        font-weight: bold;
+        padding: 0 8px;
+      }
+      .data-startDate {
+        font-weight: bold;
+        &:before {
+          content: ' { ';
+        }
+      }
+      .data-endDate {
+        font-weight: bold;
+        &:after {
+          content: ' } ';
+        }
+      }
+    }
   }
 }
 
