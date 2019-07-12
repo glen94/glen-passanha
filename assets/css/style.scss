@@ -171,7 +171,7 @@ a {padding: 0 8px;text-decoration: none;}
   .data-row {
     @include fontSize(14px);
     position: relative;
-    padding: 2px 0;
+    padding: 4px 0;
     &:hover {
       background: $veryPaleYellow;
     }
@@ -231,10 +231,26 @@ a {padding: 0 8px;text-decoration: none;}
         }
       }
     }
+    &:first-of-type .data-certifications {display: none;}
     .data-certifications {
       @include descriptionTypography();
       @include dateTypography();
       @include dutiesTypography();
+    }
+  }
+
+  .projects .data-row {
+    @include titleTypography();
+    @include descriptionTypography();
+    @include dateTypography();
+    @include dutiesTypography();
+    .data-location {
+      font-weight: bold;
+    }
+    &:hover {
+      .data-location {
+        padding: 0 8px;
+      }
     }
   }
 }
