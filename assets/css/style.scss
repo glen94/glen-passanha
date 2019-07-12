@@ -67,10 +67,12 @@ a {padding: 0 8px;text-decoration: none;}
       margin-bottom: 1em;
       text-transform: uppercase;
       color: $smokyBlock;
-      span {
-        border: solid 2px transparent;
+      a {
         padding: 0 4px 0 20px;
         margin-left: -20px;
+        color: $smokyBlock;
+        border: solid 2px transparent;
+        cursor: pointer;
         &:hover {
           border-color: $pictonBlue;
         }

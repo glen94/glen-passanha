@@ -2,7 +2,7 @@
   {% for section in include.sections %}
   <div class="glen-section {{section.key}}">
     <h3 class="glen-section-heading">
-      <span>{{section.value}}</span>
+      <a href="#{{section.key}}" id="{{section.key}}">{{section.value}}</a>
     </h3>
     {% case section.key %}
 
