@@ -1,16 +1,18 @@
 {% for data in include.data %}
-<div>
-  <span class="data_value">{{data.value}}</span>
-  {% for class in {{data.course}} %}
-  <div>
-    <span>{{class.key}}</span>
-    <span>{{class.value}}</span>
+<div class="data-row">
+  <span class="data-value">{{data.value}}</span>
+  <div class="data-courses">
+    {% for class in {{data.course}} %}
+    <div class="course">
+      <span class="course-key">{{class.key}}</span>
+      <span class="course-value">{{class.value}}</span>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-  <div>
-    <span class="data_desc">{{data.desc}}</span>
-    <span class="data_date">{{data.date}}</span>
-    <div class="data_duties">
+  <div class="data-certifications">
+    <span class="data-desc">{{data.desc}}</span>
+    <span class="data-date">{{data.date}}</span>
+    <div class="data-duties">
     {% for duty in {{data.duties}} %}
       <span>{{duty}}</span>
     {% endfor %}

@@ -29,6 +29,48 @@ a {padding: 0 8px;text-decoration: none;}
   }
 }
 
+@mixin titleTypography {
+  .data-value {
+    text-transform: uppercase;
+  }
+  &:hover {
+    .data-value {
+      font-weight: bold;
+    }
+  }
+}
+
+@mixin descriptionTypography {
+  &:hover {
+    .data-desc {
+      font-style: italic;
+    }
+  }
+}
+
+@mixin dateTypography {
+  .data-date {
+    &:before {
+      content: ' [ ';
+    }
+    &:after {
+      content: ' ] ';
+    }
+  }
+  &:hover {
+    .data-date {
+      font-weight: bold;
+      padding: 0 8px;
+      &:before {
+        content: ' { ';
+      }
+      &:after {
+        content: ' } ';
+      }
+    }
+  }
+}
+
 @mixin dateRangeTypography {
   .data-startDate {
     &:before {
@@ -54,6 +96,21 @@ a {padding: 0 8px;text-decoration: none;}
       font-weight: bold;
       &:after {
         content: ' } ';
+      }
+    }
+  }
+}
+
+@mixin dutiesTypography {
+  .data-duties {
+    display: flex;
+    flex-direction: column;
+  }
+  &:hover {
+    .data-duties span {
+      &:before {
+        content: ' - ';
+        padding-left: 8px;
       }
     }
   }
@@ -121,67 +178,64 @@ a {padding: 0 8px;text-decoration: none;}
   }
 
   .education .data-row {
-    .data-value {
-      text-transform: uppercase;
-    }
+    @include titleTypography();
+    @include descriptionTypography();
+    @include dateRangeTypography();
     
     &:hover {
-      .data-value {
-        font-weight: bold;
-      }
-      .data-desc {
-        font-style: italic;
-      }
       .data-gpa {
         font-weight: bold;
         padding: 0 8px;
       }
     }
-    @include dateRangeTypography();
   }
 
   .skills .data-row {
+    @include titleTypography();
+    @include descriptionTypography();
     display: flex;
     flex-direction: column;
-    .data-value {
-      text-transform: uppercase;
-    }
     &:hover {
-      .data-value {
-        font-weight: bold;
-      }
       .data-desc {
-        font-style: italic;
         padding: 0 8px;
       }
     }
   }
 
+  
+
   .experience .data-row {
-    .data-value {
-      text-transform: uppercase;
-    }
-    .data-duties {
-      display: flex;
-      flex-direction: column;
-    }
+    @include dateRangeTypography();
+    @include descriptionTypography();
+    @include dutiesTypography();
+    
     &:hover {
-      .data-value {
-        font-weight: bold;
-      }
       .data-desc {
         padding-right: 8px;
-        font-style: italic;
       }
-      .data-duties span {
-        &:before {
-          content: ' - ';
-          padding-left: 8px;
+    }
+  }
+
+  .coursework .data-row {
+    @include titleTypography();
+    .data-courses {
+      display: flex;
+      flex-direction: column;
+      .course:hover {
+        .course-key {
+          font-weight: bold;
+        }
+        .course-value {
+          font-style: italic;
+          padding: 0 8px;
         }
       }
     }
-
-    @include dateRangeTypography();
+    .data-certifications {
+      @include descriptionTypography();
+      @include dateTypography();
+      @include dutiesTypography();
+    }
   }
 }
 
