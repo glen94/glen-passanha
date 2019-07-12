@@ -1,34 +1,24 @@
-<div class="glen-sections">
-    <!-- id="main_content_wrap" class="outer" -->
-  <!-- <section> -->
-    <div>
-      <!-- id="main_content" class="inner" -->
-    {% for section in include.sections %}
-    <div class="{{section.key}}">
-        <!-- main_content_section  -->
-      <h3>{{section.value}}</h3>
-      
-      {% case section.key %}
+<div class="glen-content">
+  {% for section in include.sections %}
+  <div class="glen-section {{section.key}}">
+    <h3 class="glen-section-heading">
+      <span>{{section.value}}</span>
+    </h3>
+    {% case section.key %}
 
-      <div>
-          <!-- class="main_content_content" -->
-      {% when 'summary' %}
-          {% include {{section.key}}.html data=section.content %}
-      {% when 'education' %}
-        {% include education.html data=section.content %}
-      {% when 'skills' %}
-        {% include skills.html data=section.content %}
-      {% when 'experience' %}
-        {% include experience.html data=section.content %}
-      {% when 'coursework' %}
-        {% include coursework.html data=section.content %}
-      {% when 'projects' %}
-        {% include projects.html data=section.content %}
-      </div>
-      {% endcase %}
-    </div>
-    {% endfor %}
-
-    </div>
-  <!-- </section> -->
+    {% when 'summary' %}
+        {% include {{section.key}}.html data=section.content %}
+    {% when 'education' %}
+      {% include education.html data=section.content %}
+    {% when 'skills' %}
+      {% include skills.html data=section.content %}
+    {% when 'experience' %}
+      {% include experience.html data=section.content %}
+    {% when 'coursework' %}
+      {% include coursework.html data=section.content %}
+    {% when 'projects' %}
+      {% include projects.html data=section.content %}
+    {% endcase %}
+  </div>
+  {% endfor %}
 </div>

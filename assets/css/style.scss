@@ -13,7 +13,7 @@ a {padding: 0 8px;text-decoration: none;}
 @mixin fontSize($size) {
   font-size: $size;
 }
-@mixin lightTextHover {
+@mixin brightTextHover {
   &:hover {
     background: $pictonBlue;
   }
@@ -21,9 +21,11 @@ a {padding: 0 8px;text-decoration: none;}
 @mixin banner {
   background: $paleCerulean;
   color: $smokyBlock;
+  border-top: solid 4px $pictonBlue;
+  border-bottom: solid 4px $pictonBlue;
   a {
     color: $azureishWhite;
-    @include lightTextHover;
+    @include brightTextHover;
   }
 }
 
@@ -42,7 +44,7 @@ a {padding: 0 8px;text-decoration: none;}
         span {
           padding: 0 8px;
           border-right: solid 1px $azureishWhite;
-          @include lightTextHover;
+          @include brightTextHover;
           &:first-of-type {padding-left: 0;}
           &:last-of-type {border:none; padding-right:0;}
         }
@@ -55,8 +57,26 @@ a {padding: 0 8px;text-decoration: none;}
   }
 }
 
-.glen-sections {
+.glen-content {
   padding: 0 16px;
+  .glen-section {
+    padding: 1em 0 0;
+    .glen-section-heading {
+      @include fontSize(16px);
+      margin: 0;
+      margin-bottom: 1em;
+      text-transform: uppercase;
+      color: $smokyBlock;
+      span {
+        border: solid 2px transparent;
+        padding: 0 4px 0 20px;
+        margin-left: -20px;
+        &:hover {
+          border-color: $pictonBlue;
+        }
+      }
+    }
+  }
 }
 
 .glen-footer {
