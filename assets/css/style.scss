@@ -1,4 +1,64 @@
- ---
- ---
+---
+---
+$paleCerulean: #98C1D9;
+$smokyBlock: #0F0C0B;
+$pictonBlue: #30BCED;
+$middleRedPurple: #171738;
+$veryPaleYellow: #F9FBB2;
+$azureishWhite: #E1EBF1;
 
-@import "{{ site.theme }}";
+body {margin: 0;}
+a {padding: 0 8px;text-decoration: none;}
+
+@mixin fontSize($size) {
+  font-size: $size;
+}
+
+@mixin banner {
+  background: $paleCerulean;
+  color: $smokyBlock;
+  a {
+    color: $azureishWhite;
+    &:hover {
+      background: $pictonBlue;
+    }
+  }
+}
+
+.glen-header {
+  @include banner;
+  margin-top: 16px;
+  .glen-header-wrapper {
+    display: flex;
+    padding: 0 16px 8px;
+    .glen-header-about {
+      flex: 1;
+      .glen-header-about-glen {
+        display: flex;
+        margin: 0;
+        color: $azureishWhite;
+        span {
+          padding: 0 8px;
+          border-right: solid 1px $azureishWhite;
+          &:first-of-type {padding-left: 0;}
+          &:last-of-type {border:none; padding-right:0;}
+        }
+      }
+    }
+    .glen-header-links {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}
+
+.glen-sections {
+  padding: 0 16px;
+}
+
+.glen-footer {
+  @include banner;
+  @include fontSize(12px);
+  padding: 8px 16px;
+  margin: 16px 0;
+}

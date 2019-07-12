@@ -1,12 +1,17 @@
-<div id="main_content_wrap" class="outer">
-  <section id="main_content" class="inner">
+<div class="glen-sections">
+    <!-- id="main_content_wrap" class="outer" -->
+  <!-- <section> -->
+    <div>
+      <!-- id="main_content" class="inner" -->
     {% for section in include.sections %}
-    <div class="main_content_section {{section.key}}">
+    <div class="{{section.key}}">
+        <!-- main_content_section  -->
       <h3>{{section.value}}</h3>
       
       {% case section.key %}
 
-      <div class="main_content_content">
+      <div>
+          <!-- class="main_content_content" -->
       {% when 'summary' %}
           {% include {{section.key}}.html data=section.content %}
       {% when 'education' %}
@@ -23,5 +28,7 @@
       {% endcase %}
     </div>
     {% endfor %}
-  </section>
+
+    </div>
+  <!-- </section> -->
 </div>
