@@ -1,0 +1,20 @@
+{% for data in include.data %}
+<div>
+  <span class="data_value">{{data.value}}</span>
+  {% for class in {{data.course}} %}
+  <div>
+    <span>{{class.key}}</span>
+    <span>{{class.value}}</span>
+  </div>
+  {% endfor %}
+  <div>
+    <span class="data_desc">{{data.desc}}</span>
+    <span class="data_date">{{data.date}}</span>
+    <div class="data_duties">
+    {% for duty in {{data.duties}} %}
+      <span>{{duty}}</span>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}

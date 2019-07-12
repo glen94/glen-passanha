@@ -1,4 +1,3 @@
-theme: jekyll-theme-slate
 myself:
   name: Glen Passanha
   address: San Francisco, CA-94118
@@ -69,7 +68,7 @@ sections:
         startDate: Dec 2016
         endDate: Jan 2017
         duties:
-          - Maintaining log for Service requests, eg: Date and Time of servicing and maintenance
+          - Maintaining log for Service requests, eg- Date and Time of servicing and maintenance
           - Responsible for changing the ladder code of the Allen Bradley PLC as and when required by the management
   - value: Related Coursework
     key: coursework
@@ -120,7 +119,7 @@ sections:
         location: CSUF
         date: May 2019
         content:
-          - Three parts of the project: Collection of Data Set, Training the Neural Network, Hand Gesture Recognition
+          - Three parts of the project- Collection of Data Set, Training the Neural Network, Hand Gesture Recognition
           - Applied a Java Applet along with python modules Hand Detector, Easy Socket, Netmaker, Dataloader, Netloader, Tensorflow to get the desired Hand Gesture Output
       - value: Power Generation using an Array of Piezoelectric discs
         desc: Analog/Digital Circuitry

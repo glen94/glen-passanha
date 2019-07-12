@@ -35,15 +35,23 @@
         <div class="main_content_section {{section.key}}">
           <h3>{{section.value}}</h3>
           
-          {% for data in section.content %}
+          {% case section.key %}
+
           <div class="main_content_content">
-            {% case data.key %}
-            
-            {% when 'summary' %}
-              {% include summary.html value=data.value desc=data.desc %}
-            {% endcase %}
+          {% when 'summary' %}
+              {% include {{section.key}}.html data=section.content %}
+          {% when 'education' %}
+            {% include education.html data=section.content %}
+          {% when 'skills' %}
+            {% include skills.html data=section.content %}
+          {% when 'experience' %}
+            {% include experience.html data=section.content %}
+          {% when 'coursework' %}
+            {% include coursework.html data=section.content %}
+          {% when 'projects' %}
+            {% include projects.html data=section.content %}
           </div>
-          {% endfor %}
+          {% endcase %}
         </div>
         {% endfor %}
       </section>
