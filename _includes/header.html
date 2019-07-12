@@ -1,27 +1,18 @@
 <div class="glen-header">
   <div class="glen-header-wrapper">
-    <!-- id="header_wrap" class="outer" -->
-  <!-- <header> -->
-      <!-- class="inner" -->
-      <div class="glen-header-about">
-        <h1>{{ include.myself.name }}</h1>
-        <!-- id="project_title" -->
-        <h3 class="glen-header-about-glen">
-            <!-- class="header_details" -->
-          <span>{{include.myself.address}}</span>
-          <span>{{include.myself.phone}}</span>
-          <span>{{include.myself.email}}</span>
-        </h3>
-
-      </div>
-      <div class="glen-header-links">
-        {% for link in include.myself.external %}
-        <a target="_blank" href="{{link.url}}">{{link.title}}</a>
-        <!-- class="header_link"  -->
-        {% endfor %}
-
-      </div>
+    <div class="glen-header-about">
+      <h1>{{ include.myself.name }}</h1>
+      <h3 class="glen-header-about-glen">
+        <span>{{include.myself.address}}</span>
+        <span>{{include.myself.phone}}</span>
+        <span>{{include.myself.email}}</span>
+      </h3>
+    </div>
     
-  <!-- </header> -->
+    <div class="glen-header-links">
+      {% for link in include.myself.external %}
+      <a target="_blank" href="{{link.url}}">{{link.title}}</a>
+      {% endfor %}
+    </div>
   </div>
 </div>

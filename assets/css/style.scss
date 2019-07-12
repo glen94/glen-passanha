@@ -13,15 +13,17 @@ a {padding: 0 8px;text-decoration: none;}
 @mixin fontSize($size) {
   font-size: $size;
 }
-
+@mixin lightTextHover {
+  &:hover {
+    background: $pictonBlue;
+  }
+}
 @mixin banner {
   background: $paleCerulean;
   color: $smokyBlock;
   a {
     color: $azureishWhite;
-    &:hover {
-      background: $pictonBlue;
-    }
+    @include lightTextHover;
   }
 }
 
@@ -40,6 +42,7 @@ a {padding: 0 8px;text-decoration: none;}
         span {
           padding: 0 8px;
           border-right: solid 1px $azureishWhite;
+          @include lightTextHover;
           &:first-of-type {padding-left: 0;}
           &:last-of-type {border:none; padding-right:0;}
         }
