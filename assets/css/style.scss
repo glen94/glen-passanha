@@ -29,6 +29,36 @@ a {padding: 0 8px;text-decoration: none;}
   }
 }
 
+@mixin dateRangeTypography {
+  .data-startDate {
+    &:before {
+      content: ' [ ';
+    }
+    &:after {
+      content: ' - ';
+    }
+  }
+  .data-endDate {
+    &:after {
+      content: ' ] ';
+    }
+  }
+  &:hover {
+    .data-startDate {
+      font-weight: bold;
+      &:before {
+        content: ' { ';
+      }
+    }
+    .data-endDate {
+      font-weight: bold;
+      &:after {
+        content: ' } ';
+      }
+    }
+  }
+}
+
 .glen-header {
   @include banner;
   margin-top: 16px;
@@ -94,20 +124,7 @@ a {padding: 0 8px;text-decoration: none;}
     .data-value {
       text-transform: uppercase;
     }
-    .data-startDate {
-      &:before {
-        content: ' [ ';
-      }
-      &:after {
-        content: ' - ';
-      }
-    }
-    .data-endDate {
-      &:after {
-        content: ' ] ';
-      }
-    }
-
+    
     &:hover {
       .data-value {
         font-weight: bold;
@@ -119,19 +136,8 @@ a {padding: 0 8px;text-decoration: none;}
         font-weight: bold;
         padding: 0 8px;
       }
-      .data-startDate {
-        font-weight: bold;
-        &:before {
-          content: ' { ';
-        }
-      }
-      .data-endDate {
-        font-weight: bold;
-        &:after {
-          content: ' } ';
-        }
-      }
     }
+    @include dateRangeTypography();
   }
 
   .skills .data-row {
@@ -149,6 +155,33 @@ a {padding: 0 8px;text-decoration: none;}
         padding: 0 8px;
       }
     }
+  }
+
+  .experience .data-row {
+    .data-value {
+      text-transform: uppercase;
+    }
+    .data-duties {
+      display: flex;
+      flex-direction: column;
+    }
+    &:hover {
+      .data-value {
+        font-weight: bold;
+      }
+      .data-desc {
+        padding-right: 8px;
+        font-style: italic;
+      }
+      .data-duties span {
+        &:before {
+          content: ' - ';
+          padding-left: 8px;
+        }
+      }
+    }
+
+    @include dateRangeTypography();
   }
 }
 

@@ -1,12 +1,13 @@
 {% for data in include.data %}
-<div>
-  <span class="data_value">{{data.value}}</span>
-  <span class="data_desc">{{data.desc}}</span>
+<div class="data-row">
+  <span class="data-value">{{data.value}}</span>
   <div>
-    <span class="data_gpa">{{data.gpa}}</span>
-    <span class="data_startDate">{{data.startDate}}</span>
-    <span class="data_endDate">{{data.endDate}}</span>
-    <div class="data_duties">
+    <div>
+      <span class="data-desc">{{data.desc}}</span>
+      <span class="data-startDate">{{data.startDate}}</span>
+      <span class="data-endDate">{{data.endDate}}</span>
+    </div>
+    <div class="data-duties">
     {% for duty in {{data.duties}} %}
       <span>{{duty}}</span>
     {% endfor %}
